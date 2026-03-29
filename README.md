@@ -33,8 +33,7 @@ A arquitetura foi pensada para ser limpa, escalável e fácil de manter, seguind
 
 ## 📁 Estrutura do projeto
 
-```bash
-```bash
+```text
 chatbot-api-fastapi/
 ├── schemas/
 ├── routes/

@@ -1,11 +1,13 @@
-from fastapi import APIRouter
-from models.message import Message
+from fastapi import APIRouter, status
+from schemas.message import Message
 from services.response_handler import gerar_resposta_completa
 
 router = APIRouter(prefix="/chat", tags=["Chat"])
 
-@router.post("/")
-def chat(msg: Message):
+
+@router.post("/", status_code=status.HTTP_200_OK)
+def enviar_mensagem(msg: Message) -> dict:
+    
     resposta = gerar_resposta_completa(msg.text)
 
     return {

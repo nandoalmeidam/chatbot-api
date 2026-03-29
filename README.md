@@ -1,52 +1,49 @@
 # 🤖 Chatbot API com Inteligência Artificial
 
-📌 API de chatbot com respostas inteligentes, pronta para integração com sistemas reais.
+![Python](https://img.shields.io/badge/Python-3.11-blue)
+![FastAPI](https://img.shields.io/badge/FastAPI-Framework-green)
+![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)
+![License](https://img.shields.io/badge/license-MIT-lightgrey)
 
-💡 Ideal para automação de atendimento, SAC inteligente e assistentes virtuais.
+📌 API de atendimento automatizado com IA, desenvolvida em FastAPI, com arquitetura organizada e pronta para integração com sistemas reais.
 
-Este projeto foi desenvolvido com o objetivo de simular um atendimento automatizado utilizando Inteligência Artificial.
-
-A ideia é simples: criar um sistema capaz de responder perguntas de forma natural, como um atendente real faria, ajudando empresas a economizar tempo e melhorar a experiência do cliente.
-
-O chatbot foi construído com FastAPI e integrado a uma API de IA, permitindo respostas dinâmicas e adaptáveis a diferentes contextos de atendimento.
-
-## Sobre o projeto
-
-Este projeto nasceu com foco em prática e aplicação real.
-
-A proposta foi desenvolver um chatbot funcional, com uma estrutura organizada de backend e integração com IA, simulando um cenário que pode ser facilmente adaptado para empresas reais.
-
-Além disso, o sistema foi pensado para evoluir, podendo futuramente ser integrado com WhatsApp, Instagram ou outros canais de atendimento.
+💡 Ideal para automação de atendimento, SAC inteligente e construção de assistentes virtuais.
 
 ---
 
-## Preview do sistema
+## 🚀 Sobre o projeto
 
-### 📌 Documentação da API
+Este projeto foi desenvolvido com foco em prática real de backend, simulando um sistema de atendimento automatizado baseado em Inteligência Artificial.
 
-<p align="center">
-  <img src="assets/swagger-api.png" width="800"/>
-</p>
+A API recebe mensagens de usuários, processa o contexto e retorna respostas inteligentes, com comportamento semelhante a um atendente humano.
+
+A arquitetura foi pensada para ser limpa, escalável e fácil de manter, seguindo uma separação clara de responsabilidades entre rotas, serviços e modelos de dados.
 
 ---
 
-### 🤖 Atendimento automatizado com IA
+## 🧠 Diferenciais
 
-<p align="center">
-  <img src="assets/chat-horario.png" width="800"/>
-</p>
+- Arquitetura organizada (routes, services, schemas)
+- Integração com IA (Groq API)
+- Engenharia de prompt para respostas mais naturais
+- Código modular e fácil de evoluir
+- Estrutura pronta para expansão (memória, integrações, etc)
 
-<p align="center">
-  <img src="assets/chat-preco.png" width="800"/>
-</p>
+---
 
-<p align="center">
-  <img src="assets/chat-sabado.png" width="800"/>
-</p>
+## 📁 Estrutura do projeto
 
-<p align="center">
-  <img src="assets/chat-contato.png" width="800"/>
-</p>
+```bash
+```bash
+chatbot-api-fastapi/
+├── schemas/
+├── routes/
+├── services/
+├── docs/
+│   └── images/
+├── main.py
+└── requirements.txt
+```
 
 ---
 
@@ -60,7 +57,24 @@ Além disso, o sistema foi pensado para evoluir, podendo futuramente ser integra
 
 ---
 
-## Como rodar o projeto
+## Preview do sistema
+
+### 📌 Documentação da API
+
+  <p align="center"> <img src="docs/images/swagger-api.png" width="800"/> </p>
+
+---
+
+### 🤖 Atendimento automatizado com IA
+
+<p align="center"> <img src="docs/images/chat-horario.png" width="800"/> </p> 
+<p align="center"> <img src="docs/images/chat-preco.png" width="800"/> </p> 
+<p align="center"> <img src="docs/images/chat-sabado.png" width="800"/> </p> 
+<p align="center"> <img src="docs/images/chat-contato.png" width="800"/> </p>
+
+---
+
+## ⚙️ Como rodar o projeto
 
 ```bash
 # Clonar o repositório
@@ -82,20 +96,34 @@ pip install -r requirements.txt
 uvicorn main:app --reload
 ```
 
-## Acessar a API
+---
+
+## 🔐 Configuração do ambiente
+
+Crie um arquivo `.env` na raiz do projeto com:
+
+GROQ_API_KEY=sua_chave_aqui
+
+---
+
+## 🌐 Acessar a API
 
 Após rodar o projeto, acesse:
 
 👉 http://127.0.0.1:8000/docs
 
-## Exemplo de uso
+Interface interativa para testar as rotas da API (Swagger UI).
+
+---
+
+## 📌 Exemplo de uso
 
 ### Entrada
 
 ```json
 {
   "user_id": "1",
-  "text": "Vocês funcionam que horas?"
+  "text": "Qual é o preço?"
 }
 ```
 
@@ -106,21 +134,34 @@ Após rodar o projeto, acesse:
 ```json
 {
   "user_id": "1",
-  "pergunta": "Vocês funcionam que horas?",
-  "resposta": "Nossa empresa funciona de segunda a sexta..."
+  "pergunta": "Qual é o preço?",
+  "resposta": "Os preços variam conforme o serviço. Pode me informar qual solução você procura?"
 }
 ```
 
 ---
 
-## Possíveis aplicações
+## 🎯 Aplicações
 
-- Atendimento automatizado ao cliente
+- Atendimento automatizado via API
 - Chatbots comerciais
-- Integração com WhatsApp
-- Assistentes virtuais personalizados
+- Assistentes virtuais
+- Backend para sistemas com IA
+- Base para integração com diferentes canais
 
 ---
 
+## 📈 Possíveis evoluções
 
-Projeto desenvolvido com foco em aprendizado prático e construção de soluções reais, com potencial de aplicação em cenários comerciais.
+- Memória por usuário (contexto de conversa)
+- Integração com frontend (React, Web, Mobile)
+- Integração com canais externos (WhatsApp, Telegram, etc)
+- Banco de dados para histórico de atendimento
+- Sistema de respostas híbridas (FAQ + IA)
+
+--
+
+👨‍💻 Autor
+
+Desenvolvido por Fernando Almeida
+GitHub: https://github.com/nandoalmeidam
